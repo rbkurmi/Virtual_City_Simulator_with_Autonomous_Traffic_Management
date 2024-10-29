@@ -1,7 +1,3 @@
-Here's a sample `README.md` file for the code provided:
-
----
-
 # Autonomous City Traffic Simulation
 
 This project simulates a city grid where autonomous vehicles navigate between randomly assigned start and destination points, dynamically adjusting routes based on traffic light states and congestion. The simulation implements basic graph traversal (using Dijkstra's algorithm) to find optimal routes and a traffic management system to control traffic lights.
