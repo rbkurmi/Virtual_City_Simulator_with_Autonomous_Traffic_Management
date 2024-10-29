@@ -1,0 +1,18 @@
+Step-by-Step Explanation
+Step 1: Define City Layout using Graph (Adjacency List)
+Bangla: প্রথম ধাপে, আমরা একটি শহরের রাস্তাগুলোকে গ্রাফ আকারে প্রকাশ করছি। এটি একটি City ক্লাস তৈরি করেছে, যা একটি গ্রিড সাইজ নিয়ে শহরের ইন্টারসেকশনগুলোকে নোড হিসেবে ধরে নিচ্ছে এবং ট্রাফিক লাইটের স্ট্যাটাস নিয়ন্ত্রণ করে।
+English: In this first step, we create a city layout as a graph where each intersection (node) connects to other intersections. The City class creates a city grid and stores traffic light states at each intersection (randomly set to green or red).
+Step 2: Vehicle Class (Autonomous Vehicles)
+Bangla: এখানে আমরা একটি Vehicle ক্লাস তৈরি করছি যা স্বয়ংক্রিয় গাড়ি নির্দেশ করে। গাড়ি শুরু এবং শেষ পয়েন্ট থেকে স্বয়ংক্রিয়ভাবে রাস্তা নির্ধারণ করবে, যা মূলত ডাইকস্ট্রার এলগরিদম ব্যবহার করে সবচেয়ে কমপথ খুঁজে পায়।
+English: This Vehicle class represents an autonomous vehicle that finds the shortest route from its start point to its destination using Dijkstra’s algorithm. This algorithm ensures it selects the shortest path by minimizing travel distance.
+Step 3: Traffic Management (Dynamic Traffic Light Control)
+Bangla: TrafficManager ক্লাস শহরের ট্রাফিক লাইটগুলোকে নিয়ন্ত্রণ করে। প্রতি ইন্টারসেকশনের লাইটের স্ট্যাটাস পরিবর্তন করে, যাতে ট্রাফিকের চাপ কমানো যায়।
+English: The TrafficManager class manages traffic lights across the city. It updates traffic light statuses (randomly in this simulation) to manage congestion by toggling lights at intersections between red and green.
+Step 4: Simulation
+Bangla: run_simulation ফাংশনটি এই সমস্ত ক্লাস এবং ফাংশনগুলিকে একত্র করে শহরের একটি ৫x৫ গ্রিড তৈরি করে, এবং ৩টি গাড়ির জন্য রুট বের করার কাজ করে। এছাড়াও, ট্রাফিক লাইট আপডেট এবং নিয়ন্ত্রণ করা হয়।
+English: The run_simulation function brings everything together to create a 5x5 city grid and initialize 3 vehicles, each tasked with finding a route across the grid. Traffic lights are updated to simulate real-time control.
+Code Execution Overview
+Create City Layout: A 5x5 grid city layout is created with randomly placed green/red traffic lights and connected roads with random weights (travel times).
+Initialize Vehicles: Each vehicle is assigned a random start and end point and finds the shortest path.
+Traffic Management: The traffic manager dynamically updates and prints traffic light states.
+This simulation demonstrates basic city navigation with pathfinding and dynamic traffic management suitable for autonomous vehicle simulations.
